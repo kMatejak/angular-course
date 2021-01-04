@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { COURSES } from '../db-data';
+import { Course } from './model/course';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,10 @@ export class AppComponent {
   coreCourse = COURSES[0];
   rxjsCourse = COURSES[1];
   ngrxCourse = COURSES[2];
+
+  onCourseSelected(course: Course) {
+    console.log("onCourseSelected -- app.component -- click event bubbled ...", course);
+
+  }
 
 }
